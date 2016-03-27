@@ -1,0 +1,14 @@
+/* ==============================================
+	#Main Aside
+===============================================*/
+
+/**
+*	Here is the main content block element
+**/
+
+
+.aside {
+  @include layout($aside);
+  @include span(4);
+  float: right;
+}

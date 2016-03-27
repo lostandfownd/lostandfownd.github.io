@@ -1,0 +1,16 @@
+/* ===============================================
+	Responsive Control Pannel
+=============================================== */
+
+
+///////// 	Breakpoints Vars
+$mobile: 550px;
+$tablet: 900px;
+$desktop: 1200px;
+
+
+///////// 	Responsive Inc
+
+@import 'responsive/desktop';
+@import 'responsive/tablet';
+@import 'responsive/mobile';
