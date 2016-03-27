@@ -1,0 +1,49 @@
+//// Button element
+//-----------------------------------
+
+//// Buttons
+  //// Button Controls
+  // Backgrounds
+  $button__type: (
+    normal: blue,
+    submit: green,
+    download: red,
+
+    active: (
+      normal: lighten(blue, 10%),
+      submit: lighten(green, 10%),
+      download: lighten(red, 10%)
+    ),
+
+    hover: (
+    normal: lighten(blue, 20%),
+    submit: lighten(green, 20%),
+    download: lighten(red, 20%)
+    )
+  );
+
+  // Dimensions
+  $button-radius: 5px;
+  $button-padding: 8px 18px;
+
+@mixin buttons($type, $active: null, $hover: null) {
+  background: generateColourMap($button__type, $type);
+  padding: $button-padding;
+  border-radius: $button-radius;
+
+  //reset button
+  outline: 0;
+  border: none;
+
+  //Button active/hover State
+  &:active {
+    @if $active {
+      background: generateColourMap($button__type, #{$active}, $type);
+    }
+  }
+  &:hover {
+    @if $hover {
+      background: generateColourMap($button__type, #{$hover}, $type);
+    }
+  }
+}

@@ -1,0 +1,60 @@
+/* ===========================================
+	#Header
+=============================================*/
+
+/**
+*
+*	Here is the main header
+*
+**/
+
+.styleguide-header {
+  @include span(12);
+  display: inline-block;
+  position: relative;
+  padding: 2% 0;
+
+  // Rainbow border
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    height: 8px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &:before {
+    $equal-stops: #1abc9c #2ecc71 #3498db #9b59b6 #34495e #f1c40f #e67e22 #e74c3c #ecf0f1 #95a5a6;
+
+    // Equal stops
+    // background: stripes($equal-stops, $direction);
+
+    // Random stops
+    background: stripes($equal-stops, 90deg, $random: true);
+  }
+}
+
+/*  Navigation
+=============================================*/
+.navbar {
+  @include navbar;
+  @include center();
+  float: right;
+  
+  a {
+    border-radius: 4px;
+    box-shadow: 4px 6px 6px -5px #000;
+    padding: 6px 8px;
+    background: $turquise;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: em-calc(18);
+
+    &:hover {
+      background: darken($turquise, 10%);
+    }
+  }
+
+}

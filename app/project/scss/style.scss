@@ -1,0 +1,25 @@
+/* ================================================
+			##Table of contents##
+			#####################
+      # This is the project
+      # * the main project has it's specific pattern
+================================================ */
+
+	//////////////////////	Core
+  @import 'core/core';
+
+	//////////////////////	Global Utilities
+	@import 'responsive/susy/susy';
+	@import 'responsive/grid_config';
+	@import 'global';
+
+	//////////////////////	Patten Elements
+	@import 'patterns/project';
+	@import 'patterns/shame';
+
+	//////////////////////	RWD Core
+	@import 'responsive';
+
+	//////////////////////	Vendors
+	@import 'vendor/font-awesome/font-awesome';
+////////////////////////////////////////////////// IMPORTS END

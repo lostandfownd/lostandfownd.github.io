@@ -1,0 +1,20 @@
+/* ==============================================
+	#Main Content
+===============================================*/
+
+/**
+*	Here is the main content block element
+**/
+
+.main-content {
+  @include span(12);
+  padding: 40px 0;
+  min-height: 100%;
+}
+
+
+.article-container {
+  @include layout($content);
+  @include span(12);
+  float: left;
+}
