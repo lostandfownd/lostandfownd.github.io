@@ -24,14 +24,14 @@
 var errorHandler = function(err) {
   notifier.notify({ message: 'Error: ' + err.message });
   gutil.log(gutil.colors.red('Error'), err.message);
-},
+};
 
 // Destinations and paths
 
 
 //// Webserver
   gulp.task('webserver', function() {
-    gulp.src('project')
+    gulp.src(config.development.dev)
       .pipe(webserver({
         port:'9090',
         livereload: true,
