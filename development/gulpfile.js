@@ -3,7 +3,7 @@
 //  * Light Gulp build
 //  * alpha version
 //  * this would be used to create fast and small projects
-////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
   var gulp = require('gulp'),
       $ = require('gulp-load-plugins')({
         pattern: ['gulp-*', 'gulp.*'],
@@ -11,14 +11,17 @@
         lazy: true,
         camelize: true
       }),
-      config      = require('./config.json'),
-      webserver   = require('gulp-webserver'),
+      // gulp secondary plugins
       bulkSass    = require('gulp-sass-glob-import'),
       runSequence = require('run-sequence'),
       pngquant    = require('imagemin-pngquant'),
       optipng     = require('imagemin-optipng'),
       notify      = require("gulp-notify"),
-      imageop     = require('gulp-image-optimization');
+      imageop     = require('gulp-image-optimization'),
+      requireDir  = require('require-dir'),
+      // project utils
+      config      = require('./config.json'),
+      tasks      = requireDir('tasks');
 
 // Error handler
 var errorHandler = function(err) {
@@ -26,19 +29,6 @@ var errorHandler = function(err) {
   gutil.log(gutil.colors.red('Error'), err.message);
 };
 
-// Destinations and paths
-
-
-//// Webserver
-  gulp.task('webserver', function() {
-    gulp.src(config.development.dev)
-      .pipe(webserver({
-        port:'9090',
-        livereload: true,
-        open: true
-      }));
-    console.log('Server Online !');
-  });
 
 ///// Optimization and compilation tasks
   // node sass (libsass , compile time 2.1ms)

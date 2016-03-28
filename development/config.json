@@ -1,5 +1,6 @@
 {
   "styleguide": {
+    "styleguide": "styleguide",
     "scss": "project/scss/styleguide.scss",
     "css": "styleguide/css/*.css"
   },
