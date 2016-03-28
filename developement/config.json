@@ -1,26 +1,21 @@
 {
-  "bower": {
-    "bower": "./bower_components",
-    "vendorJs": "'./bower_components/**/*.js"
-  },
-
   "styleguide": {
-    "scss": "./project/scss/styleguide.scss",
-    "css": "./styleguide/css/*.css"
+    "scss": "project/scss/styleguide.scss",
+    "css": "styleguide/css/*.css"
   },
 
-  "dev" = {
-    "dev": "./project",
-    "css": "./project/css/*.css",
-    "sass": "./project/scss/**/*.scss",
-    "vendorJs": "./project/js/vendor/*.js",
-    "js": "./project/js/*.js",
-    "images": "./projectimg/*",
-    "fonts": "./project/font",
-    "html": "./project/*.html"
+  "development": {
+    "dev": "project",
+    "css": "project/css/*.css",
+    "sass": "project/scss/**/*.scss",
+    "vendorJs": "project/js/vendor/*.js",
+    "js": "project/js/*.js",
+    "images": "project/img/*",
+    "fonts": "project/font",
+    "html": "project/*.html"
   },
 
-  "prod" = {
+  "production": {
     "prod": "./",
     "css": "./css",
     "images": "./img",
@@ -29,7 +24,7 @@
     "vendorJs": ".js/vendor"
   },
 
-  "clean" = {
+  "clean": {
     "css": "./css",
     "js": "./js/*.js"
   }

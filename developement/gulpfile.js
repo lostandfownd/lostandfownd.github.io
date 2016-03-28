@@ -11,6 +11,7 @@
         lazy: true,
         camelize: true
       }),
+      config      = require('./config.json'),
       webserver   = require('gulp-webserver'),
       bulkSass    = require('gulp-sass-glob-import'),
       runSequence = require('run-sequence'),
@@ -26,44 +27,11 @@ var errorHandler = function(err) {
 },
 
 // Destinations and paths
-  bower = {
-    bower: './bower_components',
-    vendorJs: './bower_components/**/*.js'
-  },
 
-  styleguide = {
-    scss: './project/scss/styleguide.scss',
-    css: './styleguide/css/*.css'
-  },
-
-  dev = {
-    dev: './project',
-    css: './project/css/*.css',
-    sass: './project/scss/**/*.scss',
-    vendorJs: './project/js/vendor/*.js',
-    js: './project/js/*.js',
-    images: './projectimg/*',
-    fonts: './project/font',
-    html: './project/*.html'
-  },
-
-  prod = {
-    prod: './',
-    css: './css',
-    images: './img',
-    js: './js',
-    fonts: './font',
-    vendorJs: '.js/vendor'
-  },
-
-  clean = {
-    css: './css',
-    js: './js/*.js'
-  }
 
 //// Webserver
   gulp.task('webserver', function() {
-    gulp.src('./project')
+    gulp.src('project')
       .pipe(webserver({
         port:'9090',
         livereload: true,
