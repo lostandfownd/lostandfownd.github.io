@@ -1,0 +1,8 @@
+**/.*
+docs
+pkg
+bower_components
+test
+Rakefile
+*.json
+*.gemspec
