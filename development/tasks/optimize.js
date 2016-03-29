@@ -28,6 +28,7 @@ gulp.task('imagemin', function () {
       .pipe(filesize())
       .pipe(gulp.dest(destination));
 });
+
 // html minification
 // - for the moment the dest file is in development
 gulp.task('htmloptimize', function () {

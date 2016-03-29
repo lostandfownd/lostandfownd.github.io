@@ -17,12 +17,12 @@
   },
 
   "production": {
-    "prod": "./",
-    "css": "./css",
-    "images": "./img",
-    "js": "./js",
-    "fonts": "./font",
-    "vendorJs": ".js/vendor"
+    "prod": "../",
+    "css": "../css",
+    "images": "../img",
+    "js": "../js",
+    "fonts": "../font",
+    "vendorJs": "../js/vendor"
   },
 
   "clean": {

@@ -1,11 +1,13 @@
 ///// Gulp compiler module
 //  Compiler config
-//  - TODO: Make the compiler work
-//  - TODO: ADD libsass as dependecie
+//  NOTE: Compliles only Sass for the moment
+//  * can be expanded further
 
 var gulp = require('gulp'),
   sass         = require('gulp-sass'),
-  autoprefixer = require('gulp-autoprefixer')
+  notify       = require("gulp-notify"),
+  autoprefixer = require('gulp-autoprefixer'),
+  sourcemaps   = require('gulp-sourcemaps')
   runSequence  = require('run-sequence').use(gulp),
   config       = require('.././config.json');
 

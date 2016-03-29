@@ -8,6 +8,7 @@
 //  TODO: EXPAND FUNCTIONALITY
 //  NOTE: This is derived from the light gulp build
 ///////////////////////////////////////////////////////
+
 var gulp = require('gulp'),
   $ = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*'],
@@ -33,7 +34,7 @@ var errorHandler = function(err) {
 
 ///// General tasks
 // Development  (development run brute tasks)
-gulp.task('development', ['watch', 'webserver', 'libsass']);
+gulp.task('development', ['watch', 'webserver']);
 
 // Production (optimize the files make them production ready)
 gulp.task('production', ['imagemin', 'prod-cluster']);
