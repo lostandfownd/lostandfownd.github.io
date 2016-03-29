@@ -1,7 +1,7 @@
 ///// Gulp optimize file
 //  Optimization config
 //  - holds the optimization tasks
-//  - these tasks will be tied together with production
+//  NOTE: These tasks will be tied together with production
 
 var gulp = require('gulp'),
   imagemin    = require('gulp-imagemin'),
