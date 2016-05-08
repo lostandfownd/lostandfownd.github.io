@@ -1,6 +1,0 @@
-language: ruby
-before_script:
-  - npm install -g bower
-script: "rake"
-rvm:
-  - 2.0.0
